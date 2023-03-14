@@ -1,6 +1,12 @@
-# How to use this repo
-1. download docker-compose.ymal and the mock_data folder
-2. docker compose up -d
+# How to setup environment
+1. download [Docker Desktop](https://www.docker.com/). 
+2. download docker-compose.ymal 
+3. Open Docker Desktop (So the Docker daemon will start running)
+4. open terminal, and go to the location where you put the docker-compose.ymal file    
+```
+docker compose up -d
+```
+This command line will build the containers that following the setup information from this docker-compose.ymal file. You only need to do this once in your own laptop.  
 Now you have:
 
 | container  | quantity |port|
