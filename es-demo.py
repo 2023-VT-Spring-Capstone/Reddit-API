@@ -1,6 +1,6 @@
 from elasticsearch import Elasticsearch
 
-es = Elasticsearch(['http://localhost:9200'], http_auth=('elastic', 'lIaOuoKHcJcM173Ei8U7'))
+es = Elasticsearch(['http://localhost:9200'], http_auth=('your-username', 'your-password'))
 
 search_ticker = 'BB'
 upvote_ratio = 0.98
