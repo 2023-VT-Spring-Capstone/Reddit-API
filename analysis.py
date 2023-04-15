@@ -1,5 +1,4 @@
 from kafka import KafkaConsumer, KafkaProducer
-from textblob import TextBlob
 import json
 from sentiment_analysis import sentiment_analysis
 from elasticsearch import Elasticsearch
@@ -9,28 +8,7 @@ input_topic = 'DWD_TOP_LOG'
 output_topic = 'DWD_ANALYZED_LOG'
 consumer_group = 'my_consumer_group'
 es = Elasticsearch(['http://localhost:9200'],
-                   http_auth =('elastic', 'lIaOuoKHcJcM173Ei8U7'))
-
-# def analyze_sentiment(message):
-#     title = message.get('title')
-#     if title and len(title.strip()) > 0:
-#         # Use TextBlob to calculate sentiment polarity (-1 to 1)
-#         blob = TextBlob(title)
-#         sentiment_polarity = blob.sentiment.polarity
-#         # Classify sentiment as positive, negative, or neutral
-#         if sentiment_polarity > 0:
-#             sentiment = 'positive'
-#         elif sentiment_polarity < 0:
-#             sentiment = 'negative'
-#         else:
-#             sentiment = 'neutral'
-#         # Update the message with the new sentiment value
-#         message['sentiment'] = sentiment
-#     else:
-#         message['sentiment'] = 'unknown'
-
-#     return message
-
+                   http_auth =('your-username', 'your-password'))
 
 # Create Kafka consumer and producer
 consumer = KafkaConsumer(
